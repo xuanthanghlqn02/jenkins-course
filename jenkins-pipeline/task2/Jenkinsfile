@@ -10,6 +10,7 @@ pipeline {
             steps {
                 sh 'echo "Hello task2"'
                 sh 'echo "What are you doing today?"'
+                sh 'echo "How are you today?"'
             }
         }
     }
