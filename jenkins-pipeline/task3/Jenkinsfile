@@ -20,7 +20,8 @@ pipeline {
                 cd app_code
                 docker login -u ${DOCKER_REGISTRY_USERNAME} -p ${DOCKER_REGISTRY_PASSWORD}
                 docker build --tag "${REGISTRY_NAME}/nodejs-demo:${BUILD_NUMBER}" .
-                docker push "${REGISTRY_NAME}/nodejs-demo:${BUILD_NUMBER}"
+                docker push "${REGISTRY_NAME}/nodejs-demo:v${BUILD_NUMBER}"
+                docker rmi "${REGISTRY_NAME}/nodejs-demo:v${BUILD_NUMBER}"
                 '''
             }
         }
