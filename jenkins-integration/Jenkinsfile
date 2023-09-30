@@ -1,7 +1,4 @@
 pipeline {
-    plugins {
-  id "org.sonarqube" version "4.3.0.3225"
-}
     agent {
         docker {
             image 'gradle:jdk8-alpine'
